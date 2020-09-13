@@ -6,6 +6,7 @@ import { Router, hashHistory, Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
 
 const client = new ApolloClient({
   dataIdFromObject: o => o.id
@@ -16,7 +17,8 @@ const Root = () => {
     <ApolloProvider client={client}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <Route path="/login" component={LoginForm}></Route>
+          <Route path="login" component={LoginForm}></Route>
+          <Route path="signup" component={SignupForm}></Route>
         </Route>
       </Router>
     </ApolloProvider>
