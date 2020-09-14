@@ -31,7 +31,6 @@ class SignupForm extends Component {
   }
 
   render() {
-    console.log(this.state.errors);
     return (
       <div>
         <h3>Sign Up</h3>
